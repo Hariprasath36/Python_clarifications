@@ -44,24 +44,42 @@ The Model-View-Template also known as MVT architecture is used by Django. It is 
 
 When you first start a Django project, it comes with some basic files like manage.py and view.py.
 
-1) init.py – It’s an empty Python file. It is called when the package or one of its modules is imported. This file tells the Python interpreter that this directory is a package and that the presence of the __init.py_ file makes it a Python project.
+*) init.py – It’s an empty Python file. It is called when the package or one of its modules is imported. This file tells the Python interpreter that this directory is a package and that the presence of the __init.py_ file makes it a Python project.
 
-2) manage.py – This file is used to interact with your project from the command line utility. with the help of this command, we can manage several commands such as: 
+*) manage.py – This file is used to interact with your project from the command line utility. with the help of this command, we can manage several commands such as: 
 
             1) manage.py runserver
             2) manage.py makemigration
             3) manage.py migrate
 
-3) setting.py – It is the most important file in Django projects. It holds all the configuration values that your web app needs to work, i.e. pre-installed, apps, middleware, default database, API keys, and a bunch of other stuff. 
+*) setting.py – It is the most important file in Django projects. It holds all the configuration values that your web app needs to work, i.e. pre-installed, apps, middleware, default database, API keys, and a bunch of other stuff. 
 
-4) views.py – The View shows the user the model’s data. The view knows how to get to the data in the model, but it has no idea what that data represents or what the user may do with it.
+*) views.py – The View shows the user the model’s data. The view knows how to get to the data in the model, but it has no idea what that data represents or what the user may do with it.
 
-5) urls.py – It is a universal resource locator which contains all the endpoints, we store all links of the project and functions to call it.
+*) urls.py – It is a universal resource locator which contains all the endpoints, we store all links of the project and functions to call it.
 
-6) models.py – The Model represents the models of web applications in the form of classes, it contains no logic that describes how to present the data to a user.
+*) models.py – The Model represents the models of web applications in the form of classes, it contains no logic that describes how to present the data to a user.
 
-7) wsgi.py – WSGI stands for Web Server Gateway Interface, This file is used for deploying the project in WSGI. It helps communication between your Django application and the web server.
+*) wsgi.py – WSGI stands for Web Server Gateway Interface, This file is used for deploying the project in WSGI. It helps communication between your Django application and the web server.
 
-8) admin.py – It is used to create a superuser Registering model, login, and use the web application.
+*) admin.py – It is used to create a superuser Registering model, login, and use the web application.
 
-9) app.py – It is a file that helps the user to include the application configuration for their app.
+*) app.py – It is a file that helps the user to include the application configuration for their app.
+
+8) How do you create a Django project?
+
+We can create a Django project with the help of the following command
+
+django-admin startproject projectname
+
+9)  How do you create a Django app?
+
+We can create a Django app with the help of the following command
+
+python manage.py startapp appname
+
+10) How do we start our development server?
+
+We can start our development server with the help of the following command
+
+python manage.py runserver
