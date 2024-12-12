@@ -86,3 +86,73 @@ MEDIA_URL = ‘/media/’
 
 MEDIA_ROOT: It is for the server path to store files in the computer.
 MEDIA_URL: It is the referring URL for the browser to access the files over HTTP.
+
+# 11) How you can include and inherit files in your application?
+
+Using the extends tag in Templates, we can inherit our files in Django, The extends tag is used to inherit these templates. The syntax for inheriting these templates is given as:
+
+{% extends 'template_name.html' %} 
+
+This syntax helps us to add all the elements of an HTML file into another without copy-pasting the entire code. Django templates not only allow us to pass variables from view to template, but they also provide some programming capabilities like loops, comments, and extensions.
+
+# 12)  How do you connect your Django Project to the database?
+
+We need to configure our database in the settings.py file. By default, SQLite is mentioned there, and we need to change this setting accordingly like Postgres, MongoDB, and MySql. 
+
+# 13) Explain the caching strategies of Django. ?
+Django has its own inbuilt caching system that allows us to store our dynamic pages. So that we don’t have to request them again when we need them. The advantage of the Django Cache framework is that it allows us to cache data such as templates or the entire site. Django provides four different types of caching options, they are:
+
+*) per-site cache – It is the most straightforward to set up and caches your entire website.
+*) per-view cache – Individual views can be cached using the per-view cache.
+*) Template fragment caching allows you to cache only a portion of a template.
+*) low-level cache API – It can manually set, retrieve, and maintain particular objects in the cache using the low-level cache API. 
+
+# 14) Give the exception classes present in Django.
+
+An exception is a rare occurrence that causes a program to fail. Django has its own exception classes to cope with this circumstance, and it also supports all fundamental Python exceptions. some of the exception classes are listed below:
+
+*) MultipleObjectsReturned – If just one item is anticipated but many objects are returned, this error is thrown by the query.
+*) ViewDoesNotExist – When a requested view does not exist, Django.URLs raise this exception.
+*) PermissionDenied – It’s triggered when a user doesn’t have the necessary permissions to perform the requested activity.
+*) SuspiciousOperation – The query throws this error if only one item is expected but several things are returned.
+*) ValidationError – It’s triggered when data validation fails on a form or a model field.
+*) FieldDoesNotExist – It raises when the requested field does not exist.
+*) ObjectDoesNotExist – The base class for DoesNotExist exceptions.
+*) AppRegistryNotReady – It is raised when attempting to use models before the app loading process.
+*) EmptyResultSet – If a query does not return any result, this exception is raised.
+
+# 15) What is No SQL and Does Django support NoSQL?
+
+NoSql is also known as a non-relational database that stores data in a form of non-tabular, instead it stores data in the form of a storage model that is optimized for specific requirements of the type of data being stored. The types of NoSQL databases include pure documented databases, graph databases, wide column databases, and a key-value store. 
+No, Django does not officially support no-SQL databases such as CouchDB, Redis, Neo4j, MongoDB, etc. 
+
+# 16) What are the different model inheritance styles in Django?
+
+Django supports 3 types of inheritance. They are
+
+*) Abstract base classes
+*) Multi-table Inheritance
+*) Proxy models
+
+# 17) What databases are supported by Django?
+
+Databases that are supported by Django are SQLite(Inbuild), Oracle, PostgreSQL, and MySQL. Django also uses some third-party packages to handle databases including Microsoft SQL Server, IBM DB2, SAP SQL Anywhere, and Firebird. Django does not officially support no-SQL databases such as CouchDB, Redis, Neo4j, MongoDB, etc.
+
+# 18) How would you query all the items in the database table?
+
+XYZ.objects.all()
+ Where XYZ is some class created in the model.
+
+# 19) What is Django Rest Frameworkcont
+
+The REST Framework is an HTTP-based standard for listing, generating, modifying, and deleting data on your server. The Django REST framework which is also known as DRF is a powerful and flexible toolkit built on top of the Django web framework that simplifies the creation of REST interfaces by reducing the amount of code required. there are different advantages of using REST Framework like:
+
+*) Web browsable API that provides huge usability for developer
+*) Authentication policy which includes packages for 0auth1 and auth2.
+*) It supports both ORM and non-ORM data sources.
+*) It has extensive documentation and great community support.
+
+# 20) Explain the Django Response lifecycle.
+
+The Django Response lifecycle is responsible for data interchange between clients and servers with the help of the HttpRequest object, whenever a request is made by the client to the server it passes information through the system using request and response objects. these request/response objects are transmitted over the web which contains request metadata such as images, HTML, CSS, and javascript. These data are then loaded and presented to the user by Django, which passes the HttpRequest as the first argument to the view method. It is the responsibility of each view to return a HttpResponse object.
+
