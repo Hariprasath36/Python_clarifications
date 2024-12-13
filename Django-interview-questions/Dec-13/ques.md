@@ -57,3 +57,10 @@ Syntax: render(request, template_name, context=None, content_type=None, status=N
 # 10) What is a context in Django?
 
 In Django, a context is a dictionary in which the keys represent variable names and the values reflect the values of those variables. This dictionary or context is supplied to the template, which finally outputs the dynamic content using the variables. i.e. {var1: 11, var2: 12}, when you pass this context to the template render method, {{ var1 }} would be replaced with 11 and {{ var2 }} with 12 in your template.
+
+# 11) What is serialization in Django?
+
+Serializers in the Django REST Framework are responsible for transforming objects into data types that javascript and front-end frameworks can understand. After validating the incoming data, serializers also enable deserialization, which allows parsed data to be transformed back into complex types.
+
+# 12 )
+
