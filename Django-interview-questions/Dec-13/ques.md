@@ -21,4 +21,39 @@ Open the command prompt and enter the following command
 
 py -m django --version
 
+# 6) Why is Django called a loosely coupled framework?
 
+Django is known as a loosely connected framework because of its MTV architecture. Django’s design is an MVC variant, and MTV is advantageous since it totally separates server code from the client’s hardware. The client machine has Models and Views, and templates are only returned to the client. All of the architectural elements make distinct from one another.
+
+# 7) Explain Django Security.
+
+The security of users’ data is an important aspect of any website design. Django provides adequate security against a number of common threats. Django’s security features are as follows:
+
+*) Cross-site scripting (XSS) protection
+*) SQL injection protection
+*) Cross-site request forgery (CSRF) protection
+*) Enforcing SSL/HTTPS
+*) Session security
+*) Clickjacking protection
+*) Host header validation
+
+# 8) Explain user authentication in Django
+
+Django comes with an authentication system configured by default to handle objects like users, groups, permissions, and so on. The authentication system’s core is made up of user objects. It not only authenticates users but also authorizes them. Aside from using the default, we can employ a variety of web apps instead of using the default system to enable more user authentication. The default system objects are as follows:
+
+*) Users
+*) Permissions
+*) Groups
+*) Password Hashing System
+*) Forms Validation
+*) A pluggable backend system
+
+# 9) What is the “Django.shortcuts.render” function?
+
+We need the render function when a View function produces a web page as a HttpResponse instead of a basic string. Render is a shortcut for passing a template and a data dictionary. This function combines templates with a data dictionary using a templating engine. Finally, render() provides a HttpResponse containing the rendered text as well as the data from the models.
+
+Syntax: render(request, template_name, context=None, content_type=None, status=None, using=None)
+
+# 10) What is a context in Django?
+
+In Django, a context is a dictionary in which the keys represent variable names and the values reflect the values of those variables. This dictionary or context is supplied to the template, which finally outputs the dynamic content using the variables. i.e. {var1: 11, var2: 12}, when you pass this context to the template render method, {{ var1 }} would be replaced with 11 and {{ var2 }} with 12 in your template.
